@@ -1,0 +1,14 @@
+{
+  "nav": { "concept": "理念", "schedule": "班表", "reservation": "预约", "system": "收费", "models": "女性", "subscribe": "订阅", "recruit": "招聘" },
+  "home": { "heroTag": "高级外卖·东京", "heroTitle": "Royal Legato", "heroSub": "为您带来最美好的时光", "pickupTitle": "PICKUP", "pickupSub": "精选", "newFaceTitle": "NEW FACE", "newFaceSub": "新人", "scheduleTitle": "TODAY'S SCHEDULE", "scheduleSub": "今日班表", "newsTitle": "NEWS", "newsSub": "最新消息", "priceTitle": "SYSTEM", "priceSub": "收费系统", "viewAll": "查看全部", "detailBtn": "查看简介", "reserveBtn": "立即预约" },
+  "concept": { "title": "CONCEPT", "sub": "我们的理念", "h1": "优雅与感官的交汇", "body1": "Royal Legato是东京顶级外送健康服务。每位精心挑选的演员都致力于深度放松您的身心。", "body2": "\"Legato\"在意大利语中意为流畅连接——完美诠释了我们提供的体验。", "body3": "非凡的优雅与高端服务。只有在这里才能找到的时光在等待着您。", "feature1Title": "精选演员", "feature1Body": "仅招募外貌、气质和谈话能力兼备的女性。", "feature2Title": "完全隐私", "feature2Body": "我们会以极度谨慎的方式前往您的位置。", "feature3Title": "24小时服务", "feature3Body": "深夜和清晨均可服务，随时可用。" },
+  "schedule": { "title": "SCHEDULE", "sub": "今日班表", "noSchedule": "今日暂无班表", "workingNow": "工作中", "scheduled": "预定出勤" },
+  "reservation": { "title": "RESERVATION", "sub": "预约", "lead": "欢迎随时联系我们，24小时受理。", "lineLead": "LINE预约（推荐）", "wpLead": "WhatsApp预约", "telLead": "电话预约", "telNote": "10:00 – 翌5:00" },
+  "system": { "title": "SYSTEM", "sub": "收费系统", "baseCourse": "基本课程费用", "rankExtra": "等级附加费用", "totalNote": "总费用 = 基本费用 + 等级附加", "otherTitle": "其他费用", "other1": "交通费：实费", "other2": "延长：每30分钟协商", "other3": "酒店安排：协商", "rankDiamond": "钻石", "rankPlatinum": "铂金", "rankGold": "黄金", "rankSilver": "白银" },
+  "models": { "title": "MODELS", "sub": "在籍女性", "filterAll": "全部", "age": "岁", "height": "cm", "noModels": "目前暂无在籍女性" },
+  "castDetail": { "profile": "简介", "schedule": "班表", "reserveBtn": "预约她", "age": "年龄", "height": "身高", "bust": "胸围", "waist": "腰围", "hip": "臀围", "rank": "等级", "tags": "类型" },
+  "subscribe": { "title": "SUBSCRIBE", "sub": "订阅邮件", "lead": "第一时间获取新人信息和活动优惠。", "placeholder": "请输入邮箱", "submit": "订阅", "success": "订阅成功，感谢您！", "error": "订阅失败，请重试。" },
+  "recruit": { "title": "RECRUIT", "sub": "招聘", "lead": "欢迎有经验和无经验者应聘。", "feature1": "高收入·日结可", "feature2": "完全自由出勤", "feature3": "贴心支持团队", "formTitle": "应聘表格", "namePlaceholder": "姓名（艺名可）", "agePlaceholder": "年龄", "phonePlaceholder": "联系方式（LINE ID可）", "messagePlaceholder": "留言（可选）", "submit": "应聘", "success": "已收到您的应聘。我们将尽快联系您。", "error": "提交失败，请通过电话或LINE联系我们。" },
+  "footer": { "copy": "© 2026 Royal Legato. All rights reserved.", "privacy": "隐私政策", "legal": "法律声明" },
+  "ageGate": { "title": "年龄确认", "body": "本网站仅限18岁以上人士使用。您是否已满18岁？", "yes": "是（18岁以上）", "no": "否" }
+}

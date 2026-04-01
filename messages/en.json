@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "concept": "CONCEPT",
+    "schedule": "SCHEDULE",
+    "reservation": "RESERVATION",
+    "system": "SYSTEM",
+    "models": "MODELS",
+    "subscribe": "SUBSCRIBE",
+    "recruit": "RECRUIT"
+  },
+  "home": {
+    "heroTag": "PREMIUM DELIVERY HEALTH · TOKYO",
+    "heroTitle": "Royal Legato",
+    "heroSub": "The finest experience, for you.",
+    "pickupTitle": "PICKUP",
+    "pickupSub": "Pickup",
+    "newFaceTitle": "NEW FACE",
+    "newFaceSub": "New Arrivals",
+    "scheduleTitle": "TODAY'S SCHEDULE",
+    "scheduleSub": "Today's Schedule",
+    "newsTitle": "NEWS",
+    "newsSub": "Latest News",
+    "priceTitle": "SYSTEM",
+    "priceSub": "Pricing",
+    "viewAll": "View All",
+    "detailBtn": "View Profile",
+    "reserveBtn": "Reserve Now"
+  },
+  "concept": {
+    "title": "CONCEPT",
+    "sub": "Our Concept",
+    "h1": "Where Grace Meets Desire",
+    "body1": "Royal Legato is Tokyo's premier delivery health service. Each carefully selected cast member is dedicated to deeply soothing your heart and body.",
+    "body2": "\"Legato\" is Italian for smoothly connected — a perfect description of the experience we provide.",
+    "body3": "Extraordinary elegance and premium service. A moment that can only be found here awaits you.",
+    "feature1Title": "Handpicked Cast",
+    "feature1Body": "Only women with exceptional looks, grace, and conversation skills.",
+    "feature2Title": "Complete Privacy",
+    "feature2Body": "We come to your location with the utmost discretion.",
+    "feature3Title": "24/7 Available",
+    "feature3Body": "Available late night and early morning, anytime."
+  },
+  "schedule": {
+    "title": "SCHEDULE",
+    "sub": "Today's Schedule",
+    "noSchedule": "No schedule for today",
+    "workingNow": "On Duty",
+    "scheduled": "Scheduled"
+  },
+  "reservation": {
+    "title": "RESERVATION",
+    "sub": "Make a Reservation",
+    "lead": "Feel free to contact us. Available 24 hours.",
+    "lineLead": "LINE (Recommended)",
+    "wpLead": "WhatsApp",
+    "telLead": "Phone",
+    "telNote": "10:00 AM – 5:00 AM"
+  },
+  "system": {
+    "title": "SYSTEM",
+    "sub": "Pricing",
+    "baseCourse": "Base Course Prices",
+    "rankExtra": "Rank Surcharge",
+    "totalNote": "Total = Base Price + Rank Surcharge",
+    "otherTitle": "Other Fees",
+    "other1": "Transportation: Actual cost",
+    "other2": "Extension: Per 30 min, upon request",
+    "other3": "Hotel arrangement: Upon request",
+    "rankDiamond": "Diamond",
+    "rankPlatinum": "Platinum",
+    "rankGold": "Gold",
+    "rankSilver": "Silver"
+  },
+  "models": {
+    "title": "MODELS",
+    "sub": "Our Models",
+    "filterAll": "All",
+    "age": "y.o.",
+    "height": "cm",
+    "noModels": "No models available at this time"
+  },
+  "castDetail": {
+    "profile": "Profile",
+    "schedule": "Schedule",
+    "reserveBtn": "Reserve Her",
+    "age": "Age",
+    "height": "Height",
+    "bust": "Bust",
+    "waist": "Waist",
+    "hip": "Hip",
+    "rank": "Rank",
+    "tags": "Type"
+  },
+  "subscribe": {
+    "title": "SUBSCRIBE",
+    "sub": "Newsletter",
+    "lead": "Be the first to know about new faces and campaigns.",
+    "placeholder": "Enter your email",
+    "submit": "Subscribe",
+    "success": "Thank you for subscribing!",
+    "error": "Subscription failed. Please try again."
+  },
+  "recruit": {
+    "title": "RECRUIT",
+    "sub": "Join Us",
+    "lead": "Experience and inexperience welcome.",
+    "feature1": "High income, daily pay available",
+    "feature2": "Fully flexible schedule",
+    "feature3": "Caring support team",
+    "formTitle": "Application Form",
+    "namePlaceholder": "Name (stage name OK)",
+    "agePlaceholder": "Age",
+    "phonePlaceholder": "Contact (LINE ID OK)",
+    "messagePlaceholder": "Message (optional)",
+    "submit": "Apply",
+    "success": "Application received. We will contact you shortly.",
+    "error": "Submission failed. Please contact us by phone or LINE."
+  },
+  "footer": {
+    "copy": "© 2026 Royal Legato. All rights reserved.",
+    "privacy": "Privacy Policy",
+    "legal": "Legal Notice"
+  },
+  "ageGate": {
+    "title": "Age Verification",
+    "body": "This site is intended for adults 18 and over. Are you 18 or older?",
+    "yes": "Yes, I am 18+",
+    "no": "No"
+  }
+}

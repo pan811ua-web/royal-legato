@@ -1,0 +1,130 @@
+{
+  "nav": {
+    "concept": "コンセプト",
+    "schedule": "出勤情報",
+    "reservation": "ご予約",
+    "system": "料金システム",
+    "models": "在籍女性",
+    "subscribe": "メルマガ",
+    "recruit": "求人情報"
+  },
+  "home": {
+    "heroTag": "PREMIUM DELIVERY HEALTH · TOKYO",
+    "heroTitle": "Royal Legato",
+    "heroSub": "最高の時間を、あなたへ",
+    "pickupTitle": "PICKUP",
+    "pickupSub": "ピックアップ",
+    "newFaceTitle": "NEW FACE",
+    "newFaceSub": "新人情報",
+    "scheduleTitle": "TODAY'S SCHEDULE",
+    "scheduleSub": "本日の出勤情報",
+    "newsTitle": "NEWS",
+    "newsSub": "最新情報",
+    "priceTitle": "SYSTEM",
+    "priceSub": "料金システム",
+    "viewAll": "一覧を見る",
+    "detailBtn": "プロフィールを見る",
+    "reserveBtn": "今すぐ予約する"
+  },
+  "concept": {
+    "title": "CONCEPT",
+    "sub": "コンセプト",
+    "h1": "品格と官能が交わる場所",
+    "body1": "Royal Legatoは、東京で最高峰のデリバリーヘルスです。厳選されたキャスト一人ひとりが、お客様の心と体を深く癒します。",
+    "body2": "「Legato」とはイタリア語で「滑らかにつながれた」という意味。それは、私たちが提供するひとときの体験そのものです。",
+    "body3": "非日常の優雅さと、上質なサービス。ここでしか出会えない時間が、あなたを待っています。",
+    "feature1Title": "厳選キャスト",
+    "feature1Body": "ルックス・品性・会話力を兼ね備えた女性のみ在籍。",
+    "feature2Title": "完全プライバシー",
+    "feature2Body": "ご指定の場所へ丁寧にお伺いします。",
+    "feature3Title": "24時間対応",
+    "feature3Body": "深夜・早朝も対応可能。いつでもご利用いただけます。"
+  },
+  "schedule": {
+    "title": "SCHEDULE",
+    "sub": "出勤情報",
+    "noSchedule": "本日の出勤予定はありません",
+    "workingNow": "出勤中",
+    "scheduled": "出勤予定"
+  },
+  "reservation": {
+    "title": "RESERVATION",
+    "sub": "ご予約",
+    "lead": "お気軽にお問い合わせください。24時間受け付けております。",
+    "lineLead": "LINEでの予約（推奨）",
+    "wpLead": "WhatsAppでの予約",
+    "telLead": "お電話でのご予約",
+    "telNote": "10:00 〜 翌5:00"
+  },
+  "system": {
+    "title": "SYSTEM",
+    "sub": "料金システム",
+    "baseCourse": "基本コース料金",
+    "rankExtra": "ランク別加算料金",
+    "totalNote": "合計料金 = 基本料金 + ランク加算",
+    "otherTitle": "その他料金",
+    "other1": "交通費：実費",
+    "other2": "延長：30分ごとに応相談",
+    "other3": "ホテル手配：応相談",
+    "rankDiamond": "ダイヤモンド",
+    "rankPlatinum": "プラチナ",
+    "rankGold": "ゴールド",
+    "rankSilver": "シルバー"
+  },
+  "models": {
+    "title": "MODELS",
+    "sub": "在籍女性",
+    "filterAll": "すべて",
+    "age": "歳",
+    "height": "cm",
+    "noModels": "現在、在籍女性はおりません"
+  },
+  "castDetail": {
+    "profile": "プロフィール",
+    "schedule": "出勤スケジュール",
+    "reserveBtn": "このコを予約する",
+    "age": "年齢",
+    "height": "身長",
+    "bust": "バスト",
+    "waist": "ウエスト",
+    "hip": "ヒップ",
+    "rank": "ランク",
+    "tags": "タイプ"
+  },
+  "subscribe": {
+    "title": "SUBSCRIBE",
+    "sub": "メルマガ登録",
+    "lead": "新人情報・キャンペーン情報をいち早くお届けします。",
+    "placeholder": "メールアドレスを入力",
+    "submit": "登録する",
+    "success": "登録が完了しました。ありがとうございます。",
+    "error": "登録に失敗しました。もう一度お試しください。"
+  },
+  "recruit": {
+    "title": "RECRUIT",
+    "sub": "求人情報",
+    "lead": "一緒に働きませんか？経験・未経験問いません。",
+    "feature1": "高収入・日払い可",
+    "feature2": "完全自由出勤",
+    "feature3": "丁寧なサポート",
+    "formTitle": "応募フォーム",
+    "namePlaceholder": "お名前（源氏名可）",
+    "agePlaceholder": "年齢",
+    "phonePlaceholder": "連絡先（LINE IDでも可）",
+    "messagePlaceholder": "メッセージ（任意）",
+    "submit": "応募する",
+    "success": "応募を受け付けました。担当者よりご連絡いたします。",
+    "error": "送信に失敗しました。お電話またはLINEでお問い合わせください。"
+  },
+  "footer": {
+    "copy": "© 2026 Royal Legato. All rights reserved.",
+    "privacy": "プライバシーポリシー",
+    "legal": "特定商取引法"
+  },
+  "ageGate": {
+    "title": "年齢確認",
+    "body": "このサイトは18歳以上の方を対象としています。あなたは18歳以上ですか？",
+    "yes": "はい（18歳以上）",
+    "no": "いいえ"
+  }
+}
