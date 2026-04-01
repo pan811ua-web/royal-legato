@@ -5,6 +5,10 @@ import { getLocale } from "next-intl/server";
 import SectionTitle from "@/components/common/SectionTitle";
 import RankBadge from "@/components/common/RankBadge";
 import CampaignSlider from "@/components/common/CampaignSlider";
+import ScrollFadeIn from "@/components/common/ScrollFadeIn";
+import CountUp from "@/components/common/CountUp";
+import CastRibbon from "@/components/common/CastRibbon";
+import ParallaxSection from "@/components/common/ParallaxSection";
 import { buildMetadata } from "@/lib/seo";
 import { getActiveCasts, getCastsWithTodaySchedule } from "@/lib/queries/casts";
 import { getPublishedNews } from "@/lib/queries/news";
@@ -26,7 +30,7 @@ function CastCardHome({ cast, locale, t }: {
 }) {
   const mainPhoto = cast.cast_photos?.find((p: { is_main: boolean }) => p.is_main) ?? cast.cast_photos?.[0];
   return (
-    <Link href={`/${locale}/models/${cast.id}`} className="group block bg-white border border-[var(--border)] hover:shadow-md transition-shadow">
+    <Link href={`/${locale}/models/${cast.id}`} className="group block bg-white border border-[var(--border)] card-hover">
       <div className="relative aspect-[3/4] bg-[var(--teal-light)] overflow-hidden">
         {mainPhoto ? (
           <img src={mainPhoto.url} alt={cast.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -116,78 +120,117 @@ function HomePageClient({ locale, casts, todayCasts, news, prices, settings }: {
         </div>
       </section>
 
+      {/* Cast Ribbon */}
+      <CastRibbon casts={casts} />
+
       {/* Pickup */}
       <section className="py-20 px-4 max-w-6xl mx-auto">
-        <SectionTitle en={t("home.pickupTitle")} ja={t("home.pickupSub")} />
+        <ScrollFadeIn>
+          <SectionTitle en={t("home.pickupTitle")} ja={t("home.pickupSub")} />
+        </ScrollFadeIn>
         {pickupCasts.length > 0 ? (
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {pickupCasts.map((cast) => (
-              <CastCardHome key={cast.id} cast={cast} locale={locale} t={t} />
+            {pickupCasts.map((cast, i) => (
+              <ScrollFadeIn key={cast.id} delay={i * 100}>
+                <CastCardHome cast={cast} locale={locale} t={t} />
+              </ScrollFadeIn>
             ))}
           </div>
         ) : (
           <p className="text-center text-gray-400 tracking-widest text-sm py-12">{t("models.noModels")}</p>
         )}
-        <div className="text-center mt-8">
-          <Link href={`/${locale}/models`}
-            className="inline-block border border-[var(--teal)] text-[var(--teal)] text-xs tracking-widest px-10 py-3 hover:bg-[var(--teal)] hover:text-white transition-colors">
-            {t("home.viewAll")}
-          </Link>
-        </div>
+        <ScrollFadeIn delay={400}>
+          <div className="text-center mt-8">
+            <Link href={`/${locale}/models`}
+              className="inline-block border border-[var(--teal)] text-[var(--teal)] text-xs tracking-widest px-10 py-3 hover:bg-[var(--teal)] hover:text-white transition-colors">
+              {t("home.viewAll")}
+            </Link>
+          </div>
+        </ScrollFadeIn>
       </section>
+
+      {/* Stats */}
+      <ParallaxSection className="bg-gray-900 text-white py-16 px-4" speed={0.15}>
+        <div className="max-w-3xl mx-auto grid grid-cols-3 gap-8 text-center">
+          {[
+            { value: 500, suffix: "+", label: "在籍キャスト累計" },
+            { value: 24, suffix: "H", label: "営業時間" },
+            { value: 98, suffix: "%", label: "リピーター満足度" },
+          ].map((stat, i) => (
+            <ScrollFadeIn key={i} delay={i * 150}>
+              <div>
+                <p className="font-serif text-4xl md:text-5xl text-[var(--gold)] tracking-wider">
+                  <CountUp end={stat.value} suffix={stat.suffix} />
+                </p>
+                <p className="text-[10px] tracking-widest text-gray-400 mt-2">{stat.label}</p>
+              </div>
+            </ScrollFadeIn>
+          ))}
+        </div>
+      </ParallaxSection>
 
       {/* Today's Schedule */}
       <section className="py-20 px-4 bg-[var(--teal-light)]">
         <div className="max-w-4xl mx-auto">
-          <SectionTitle en={t("home.scheduleTitle")} ja={t("home.scheduleSub")} />
+          <ScrollFadeIn>
+            <SectionTitle en={t("home.scheduleTitle")} ja={t("home.scheduleSub")} />
+          </ScrollFadeIn>
           {todayCasts.length > 0 ? (
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {todayCasts.slice(0, 4).map((cast) => {
+              {todayCasts.slice(0, 4).map((cast, i) => {
                 const sch = cast.schedules?.[0];
                 return (
-                  <Link key={cast.id} href={`/${locale}/models/${cast.id}`}
-                    className="bg-white p-4 text-center border border-[var(--border)] hover:shadow-md transition-shadow">
-                    <div className="w-16 h-16 rounded-full bg-[var(--teal)]/10 mx-auto mb-2 overflow-hidden flex items-center justify-center">
-                      {cast.cast_photos?.[0] ? (
-                        <img src={cast.cast_photos[0].url} alt={cast.name} className="w-full h-full object-cover" />
-                      ) : (
-                        <span className="font-serif text-xl text-[var(--teal)]">{cast.name[0]}</span>
-                      )}
-                    </div>
-                    <p className="font-serif text-sm tracking-wider mb-1">{cast.name}</p>
-                    <p className="text-[10px] text-[var(--teal)] tracking-widest">
-                      {sch?.status === "working" ? t("schedule.workingNow") : t("schedule.scheduled")}
-                    </p>
-                    {sch && <p className="text-xs text-gray-500 mt-1">{sch.start_time.slice(0,5)} 〜 {sch.end_time?.slice(0,5) ?? ""}</p>}
-                  </Link>
+                  <ScrollFadeIn key={cast.id} delay={i * 100}>
+                    <Link href={`/${locale}/models/${cast.id}`}
+                      className="bg-white p-4 text-center border border-[var(--border)] card-hover block">
+                      <div className="w-16 h-16 rounded-full bg-[var(--teal)]/10 mx-auto mb-2 overflow-hidden flex items-center justify-center">
+                        {cast.cast_photos?.[0] ? (
+                          <img src={cast.cast_photos[0].url} alt={cast.name} className="w-full h-full object-cover" />
+                        ) : (
+                          <span className="font-serif text-xl text-[var(--teal)]">{cast.name[0]}</span>
+                        )}
+                      </div>
+                      <p className="font-serif text-sm tracking-wider mb-1">{cast.name}</p>
+                      <p className="text-[10px] text-[var(--teal)] tracking-widest">
+                        {sch?.status === "working" ? t("schedule.workingNow") : t("schedule.scheduled")}
+                      </p>
+                      {sch && <p className="text-xs text-gray-500 mt-1">{sch.start_time.slice(0,5)} 〜 {sch.end_time?.slice(0,5) ?? ""}</p>}
+                    </Link>
+                  </ScrollFadeIn>
                 );
               })}
             </div>
           ) : (
             <p className="text-center text-gray-500 tracking-widest text-sm py-12">{t("schedule.noSchedule")}</p>
           )}
-          <div className="text-center mt-8">
-            <Link href={`/${locale}/schedule`}
-              className="inline-block border border-[var(--teal)] text-[var(--teal)] text-xs tracking-widest px-10 py-3 hover:bg-[var(--teal)] hover:text-white transition-colors">
-              {t("home.scheduleTitle")} →
-            </Link>
-          </div>
+          <ScrollFadeIn delay={400}>
+            <div className="text-center mt-8">
+              <Link href={`/${locale}/schedule`}
+                className="inline-block border border-[var(--teal)] text-[var(--teal)] text-xs tracking-widest px-10 py-3 hover:bg-[var(--teal)] hover:text-white transition-colors">
+                {t("home.scheduleTitle")} →
+              </Link>
+            </div>
+          </ScrollFadeIn>
         </div>
       </section>
 
       {/* News */}
       <section className="py-20 px-4 max-w-4xl mx-auto">
-        <SectionTitle en={t("home.newsTitle")} ja={t("home.newsSub")} />
+        <ScrollFadeIn>
+          <SectionTitle en={t("home.newsTitle")} ja={t("home.newsSub")} />
+        </ScrollFadeIn>
         {news.length > 0 ? (
           <div className="divide-y divide-[var(--border)]">
-            {news.map((item) => (
-              <div key={item.id} className="py-4 flex gap-4 items-start">
-                <span className="text-[10px] tracking-widest text-gray-400 mt-0.5 whitespace-nowrap">
-                  {item.published_at ? new Date(item.published_at).toLocaleDateString("ja-JP") : ""}
-                </span>
-                <span className="text-[10px] bg-[var(--teal-light)] text-[var(--teal)] px-2 py-0.5 tracking-widest whitespace-nowrap">{item.category}</span>
-                <p className="text-sm text-gray-700">{item.title}</p>
-              </div>
+            {news.map((item, i) => (
+              <ScrollFadeIn key={item.id} delay={i * 80}>
+                <div className="py-4 flex gap-4 items-start">
+                  <span className="text-[10px] tracking-widest text-gray-400 mt-0.5 whitespace-nowrap">
+                    {item.published_at ? new Date(item.published_at).toLocaleDateString("ja-JP") : ""}
+                  </span>
+                  <span className="text-[10px] bg-[var(--teal-light)] text-[var(--teal)] px-2 py-0.5 tracking-widest whitespace-nowrap">{item.category}</span>
+                  <p className="text-sm text-gray-700">{item.title}</p>
+                </div>
+              </ScrollFadeIn>
             ))}
           </div>
         ) : (

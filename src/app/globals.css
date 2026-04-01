@@ -71,3 +71,42 @@ body {
 .fade-up {
   animation: fadeUp 0.7s ease both;
 }
+
+/* Page loader */
+@keyframes loaderFadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes loaderLine {
+  from { opacity: 0; width: 0; }
+  to   { opacity: 1; width: 6rem; }
+}
+
+/* Ripple */
+@keyframes rippleAnim {
+  to { transform: scale(1); opacity: 0; }
+}
+
+/* Cast ribbon scroll */
+@keyframes ribbonScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-33.333%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ribbonScroll { animation: none; }
+}
+
+/* Parallax container */
+.parallax-bg {
+  will-change: transform;
+  transition: transform 0.1s linear;
+}
+
+/* Card hover shadow */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}

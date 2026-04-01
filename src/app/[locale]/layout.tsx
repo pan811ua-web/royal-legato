@@ -8,6 +8,7 @@ import Footer from "@/components/layout/Footer";
 import FixedContactBar from "@/components/layout/FixedContactBar";
 import AgeVerificationGate from "@/components/common/AgeVerificationGate";
 import { LocalBusinessJsonLd } from "@/components/common/JsonLd";
+import PageLoader from "@/components/common/PageLoader";
 import { SITE_URL } from "@/lib/seo";
 import { getSiteSettings } from "@/lib/queries/settings";
 
@@ -47,6 +48,7 @@ export default async function LocaleLayout({
       <body className="bg-white text-gray-900">
         <LocalBusinessJsonLd />
         <NextIntlClientProvider messages={messages}>
+          <PageLoader />
           <AgeVerificationGate />
           <Header phone={settings.phone} />
           <main className="pb-16 lg:pb-0">{children}</main>
